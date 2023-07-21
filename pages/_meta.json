@@ -1,6 +1,5 @@
 {
     "index": {
-        "title": "首页",
         "type": "page",
         "display": "hidden"
     },
