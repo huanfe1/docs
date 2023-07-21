@@ -1,0 +1,9 @@
+{
+    "index": {
+        "title": "主页",
+        "display": "hidden",
+        "theme": {
+            "sidebar": false
+        }
+    }
+}

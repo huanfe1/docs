@@ -1,15 +1,24 @@
 import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
 import Img from './components/img';
+import { useState, useEffect } from 'react';
 
 const config: DocsThemeConfig = {
-    logo: <span>My Project</span>,
+    logo: <h1>幻非</h1>,
     project: {
-        link: 'https://github.com/shuding/nextra-docs-template',
+        link: 'https://github.com/huanfe1/docs',
     },
-    docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+    docsRepositoryBase: 'https://github.com/huanfe1/docs',
     footer: {
-        text: '幻非的文档',
+        text: (
+            <span>
+                MIT {new Date().getFullYear()} ©{' '}
+                <a href="https://nextra.site" target="_blank">
+                    幻非
+                </a>
+                .
+            </span>
+        ),
     },
     nextThemes: {
         defaultTheme: 'dark',
@@ -17,16 +26,15 @@ const config: DocsThemeConfig = {
     useNextSeoProps() {
         return {
             titleTemplate: '%s - 幻非',
-        }
+        };
     },
     components: {
         img: Img,
     },
-    head: (
-        <>
-            <meta name="referrer" content="never" />
-        </>
-    ),
+    navigation: false,
+    editLink: {
+        text: '编辑此页',
+    },
 };
 
 export default config;
